@@ -8,7 +8,7 @@ We added our work ontop of <a href="https://pbrt.org/">pbrt-v3</a>, utilizing th
 ## What I contributed
 
 I worked on the stage 1 (a and c steps) for VCM (In <a href="/VCM integration into pbrt/vcm.cpp">vcm.cpp</a> from line 530).  
-This involved tracing light subpaths from all light sources, creating a vector grid and storing the light vertices within the grid to be used for stage 2.
+This involved tracing light subpaths from all light sources, creating a vector grid search structure and storing the light vertices within the grid to be used for stage 2.
 
 <img src="/Readme Images/VCM overview.jpg" alt="VCM Overview" width="60%">
 <i>Obtained from <a href="http://iliyan.com/publications/ImplementingVCM">VCM</a> paper</i>
