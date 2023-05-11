@@ -1,0 +1,194 @@
+Film "image" "integer xresolution" [1080] "integer yresolution" [628] "string filename" "bdpt_wall.exr"
+PixelFilter "box" "float xwidth" [0.5] "float ywidth" [0.5] 
+Accelerator "bvh" 
+"string splitmethod" "sah"
+"integer maxnodeprims" [4]
+Sampler "halton"
+"integer pixelsamples" [100]
+"bool samplepixelcenter" "false"
+Integrator "bdpt"
+"integer maxdepth" [10]
+Scale -1 1 1 #avoid the 'flipped image' bug..
+LookAt	10.0 -10.0 30.0
+	9.613234519958496 -9.613234519958496 29.1628475189209
+	-0.5919566750526428 0.591956615447998 0.5469686388969421
+
+Camera "perspective"
+"float fov" [22.895194130645738]
+WorldBegin
+
+	AttributeBegin
+		Translate	4.076245307922363 1.0054539442062378 5.903861999511719
+		LightSource "point"
+"rgb I" [0.0 0.0 0.0]
+	AttributeEnd
+	
+
+	AttributeBegin
+		 LightSource "spot"
+ "point from" [0.0 0.0 17.373600006103516]
+ "point to" [0.0 0.0 15.367435455322266]
+		"rgb I" [ 2500 2500 2500 ]
+		AttributeEnd
+
+		AttributeBegin
+			Transform [10.000000 0.000000 0.000000 0.000000 0.000000 10.000000 0.000000 0.000000 0.000000 0.000000 10.000000 0.000000 0.000000 0.000000 0.000000 1.000000 ]
+			
+			Texture "woodfloor.png" "color" "imagemap" "string filename" ["textures/woodfloor.png"]			
+			Material "matte"			
+			"float sigma" [0.0]			
+			"texture Kd" "woodfloor.png"			
+			Shape "trianglemesh"
+			"point P" [
+			-1.0 -1.0 0.0 1.0 -1.0 0.0 1.0 1.0 0.0 -1.0 -1.0 0.0 1.0 1.0 0.0 -1.0 1.0 0.0			
+			]
+			"normal N" [
+			0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0			
+			]
+			"float st" [
+			-1.3440922498703003 -1.3440922498703003 
+			2.34409236907959 -1.3440922498703003 
+			2.34409236907959 2.34409236907959 
+			-1.3440922498703003 -1.3440922498703003 
+			2.34409236907959 2.34409236907959 
+			-1.3440922498703003 2.34409236907959 
+			]
+			"integer indices" [
+			0 1 2 3 4 5 
+			]
+		AttributeEnd
+		
+
+		AttributeBegin
+			Transform [-0.000000 0.000000 -10.000000 0.000000 0.000000 10.000000 0.000000 0.000000 10.000000 0.000000 -0.000000 0.000000 -10.000000 0.000000 10.000000 1.000000 ]
+			
+			Texture "walltile.png" "color" "imagemap" "string filename" ["textures/walltile.png"]			
+			Material "matte"			
+			"float sigma" [0.0]			
+			"texture Kd" "walltile.png"			
+			Shape "trianglemesh"
+			"point P" [
+			-1.0 -1.0 0.0 1.0 -1.0 0.0 1.0 1.0 0.0 -1.0 -1.0 0.0 1.0 1.0 0.0 -1.0 1.0 0.0			
+			]
+			"normal N" [
+			0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0			
+			]
+			"float st" [
+			1.4877285957336426 -0.4775606393814087 
+			1.4775605201721191 1.4877285957336426 
+			-0.4877285361289978 1.4775605201721191 
+			1.4877285957336426 -0.4775606393814087 
+			-0.4877285361289978 1.4775605201721191 
+			-0.4775606393814087 -0.4877285361289978 
+			]
+			"integer indices" [
+			0 1 2 3 4 5 
+			]
+		AttributeEnd
+		
+
+		AttributeBegin
+			Transform [-0.000000 0.000000 -10.000000 0.000000 0.000000 10.000000 0.000000 0.000000 10.000000 0.000000 -0.000000 0.000000 10.000000 0.000000 10.000000 1.000000 ]
+			
+			Texture "walltile.png" "color" "imagemap" "string filename" ["textures/walltile.png"]			
+			Material "matte"			
+			"float sigma" [0.0]			
+			"texture Kd" "walltile.png"			
+			Shape "trianglemesh"
+			"point P" [
+			-1.0 -1.0 0.0 1.0 -1.0 0.0 1.0 1.0 0.0 -1.0 -1.0 0.0 1.0 1.0 0.0 -1.0 1.0 0.0			
+			]
+			"normal N" [
+			0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0			
+			]
+			"float st" [
+			1.4055404663085938 -0.4166821837425232 
+			1.4166821241378784 1.4055404663085938 
+			-0.40554046630859375 1.4166821241378784 
+			1.4055404663085938 -0.4166821837425232 
+			-0.40554046630859375 1.4166821241378784 
+			-0.4166821837425232 -0.40554046630859375 
+			]
+			"integer indices" [
+			0 1 2 3 4 5 
+			]
+		AttributeEnd
+		
+
+		AttributeBegin
+			Transform [-0.000000 -0.000000 -10.000000 0.000000 10.000000 -0.000000 -0.000000 0.000000 -0.000000 -10.000000 0.000000 0.000000 0.000000 -10.000000 10.000000 1.000000 ]
+			
+			Texture "walltile.png" "color" "imagemap" "string filename" ["textures/walltile.png"]			
+			Material "matte"			
+			"float sigma" [0.0]			
+			"texture Kd" "walltile.png"			
+			Shape "trianglemesh"
+			"point P" [
+			-1.0 -1.0 0.0 1.0 -1.0 0.0 1.0 1.0 0.0 -1.0 -1.0 0.0 1.0 1.0 0.0 -1.0 1.0 0.0			
+			]
+			"normal N" [
+			0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0			
+			]
+			"float st" [
+			1.55693781375885 -0.5544229745864868 
+			1.5544229745864868 1.55693781375885 
+			-0.5569378137588501 1.5544229745864868 
+			1.55693781375885 -0.5544229745864868 
+			-0.5569378137588501 1.5544229745864868 
+			-0.5544229745864868 -0.5569378137588501 
+			]
+			"integer indices" [
+			0 1 2 3 4 5 
+			]
+		AttributeEnd
+		
+
+		AttributeBegin
+			Transform [-0.000000 -0.000000 -10.000000 0.000000 10.000000 -0.000000 -0.000000 0.000000 -0.000000 -10.000000 0.000000 0.000000 0.000000 10.000000 10.000000 1.000000 ]
+			
+			Texture "walltile.png" "color" "imagemap" "string filename" ["textures/walltile.png"]			
+			Material "matte"			
+			"float sigma" [0.0]			
+			"texture Kd" "walltile.png"			
+			Shape "trianglemesh"
+			"point P" [
+			-1.0 -1.0 0.0 1.0 -1.0 0.0 1.0 1.0 0.0 -1.0 -1.0 0.0 1.0 1.0 0.0 -1.0 1.0 0.0			
+			]
+			"normal N" [
+			0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0			
+			]
+			"float st" [
+			1.5284225940704346 -0.5334395170211792 
+			1.5334395170211792 1.5284225940704346 
+			-0.5284225940704346 1.5334395170211792 
+			1.5284225940704346 -0.5334395170211792 
+			-0.5284225940704346 1.5334395170211792 
+			-0.5334395170211792 -0.5284225940704346 
+			]
+			"integer indices" [
+			0 1 2 3 4 5 
+			]
+		AttributeEnd
+		
+
+		AttributeBegin
+			Transform [3.500000 0.000000 0.000000 0.000000 0.000000 3.500000 0.000000 0.000000 0.000000 0.000000 4.059210 0.000000 0.000000 0.000000 6.011738 1.000000 ]
+			MakeNamedMedium "Pbrt Medium"			
+			"string type" ["homogeneous"]			
+			"rgb sigma_a" [ 0.624 0.0511 0.00530 ]
+            		"rgb sigma_s" [ 0.0005 0.0015 0.00375 ]		
+			"float g" [ 0.0 ]			
+			"float scale" [ 1.0 ]			
+			
+			MediumInterface "Pbrt Medium" ""			
+			Material "glass"			
+			"color Kr" [ 0.800000011920929 0.800000011920929 0.800000011920929]			
+			"color Kt" [ 0.800000011920929 0.800000011920929 0.800000011920929]			
+			"float uroughness" [0.0]			
+			"float vroughness" [0.0]			
+			"float index" [1.3329999446868896]			
+			Shape "plymesh" "string filename" ["meshes/00068/Liquid Domain_mat0.ply"]
+		AttributeEnd
+		
+
+	WorldEnd	

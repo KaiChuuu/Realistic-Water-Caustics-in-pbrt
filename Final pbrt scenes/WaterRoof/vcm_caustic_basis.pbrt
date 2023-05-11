@@ -1,0 +1,122 @@
+Film "image" "integer xresolution" [1080] "integer yresolution" [628] "string filename" "vcm_caustic_basis.exr"
+PixelFilter "box" "float xwidth" [0.5] "float ywidth" [0.5] 
+Accelerator "bvh" 
+"string splitmethod" "sah"
+"integer maxnodeprims" [4]
+Sampler "sobol"
+"integer pixelsamples" [16]
+"bool samplepixelcenter" "false"
+Integrator "vcm"
+"integer maxdepth" [5]
+Scale -1 1 1 #avoid the 'flipped image' bug..
+LookAt	17.35890007019043 -16.925790786743164 19.059432983398438
+	16.754621505737305 -16.317106246948242 18.5452823638916
+	-0.3622369170188904 0.36487725377082825 0.8576998114585876
+
+Camera "perspective"
+"float fov" [28.40927165250392]
+WorldBegin
+
+	AttributeBegin
+		 LightSource "spot"
+ "point from" [0.0 11.502942085266113 36.66518020629883]
+ "point to" [0.0 9.959724426269531 31.955215454101562]
+		"rgb I" [ 2500 2500 2500 ]
+		AttributeEnd
+
+		AttributeBegin
+			Transform [13.213801 0.000000 0.000000 0.000000 0.000000 12.675672 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 ]
+			
+			Texture "woodfloor.png" "color" "imagemap" "string filename" ["textures/woodfloor.png"]			
+			Material "matte"			
+			"float sigma" [0.0]			
+			"texture Kd" "woodfloor.png"			
+			Shape "plymesh" "string filename" ["meshes/00146/Cube_mat0.ply"]
+		AttributeEnd
+		
+
+		AttributeBegin
+			Transform [6.451355 0.000000 0.000000 0.000000 0.000000 6.942677 0.000000 0.000000 0.000000 0.000000 2.194158 0.000000 0.000000 2.918943 9.498896 1.000000 ]
+			MakeNamedMedium "Pbrt Medium"			
+			"string type" ["homogeneous"]			
+			"rgb sigma_a" [ 0.624 0.0511 0.00530]		
+			"rgb sigma_s" [ 0.0005 0.0015 0.00375]				
+			"float g" [ 0.0 ]			
+			"float scale" [ 1.0 ]
+			
+			MediumInterface "Pbrt Medium" ""			
+			Material "glass"			
+			"color Kr" [ 0.800000011920929 0.800000011920929 0.800000011920929]			
+			"color Kt" [ 0.800000011920929 0.800000011920929 0.800000011920929]			
+			"float uroughness" [0.0]			
+			"float vroughness" [0.0]			
+			"float index" [1.3329999446868896]			
+			Shape "plymesh" "string filename" ["meshes/00146/Liquid Domain_mat0.ply"]
+		AttributeEnd
+		
+
+		AttributeBegin
+			Transform [-0.000000 0.000000 -9.468298 0.000000 0.000000 12.380071 0.000000 0.000000 1.000000 0.000000 -0.000000 0.000000 -10.621352 0.000000 8.155986 1.000000 ]
+			
+			Texture "walltile.png" "color" "imagemap" "string filename" ["textures/walltile.png"]			
+			Material "matte"			
+			"float sigma" [0.0]			
+			"texture Kd" "walltile.png"			
+			Shape "trianglemesh"
+			"point P" [
+			-1.0 -1.0 0.0 1.0 -1.0 0.0 1.0 1.0 0.0 -1.0 -1.0 0.0 1.0 1.0 0.0 -1.0 1.0 0.0			
+			]
+			"normal N" [
+			0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0			
+			]
+			"float st" [
+			1.613688349723816 -0.614425778388977 
+			1.614425778388977 1.613688349723816 
+			-0.6136882305145264 1.614425778388977 
+			1.613688349723816 -0.614425778388977 
+			-0.6136882305145264 1.614425778388977 
+			-0.614425778388977 -0.6136882305145264 
+			]
+			"integer indices" [
+			0 1 2 3 4 5 
+			]
+		AttributeEnd
+		
+
+		AttributeBegin
+			Transform [-0.000000 -0.000000 -9.468298 0.000000 11.172598 -0.000000 -0.000000 0.000000 -0.000000 -1.000000 0.000000 0.000000 0.122791 11.763029 8.155986 1.000000 ]
+			
+			Texture "walltile.png" "color" "imagemap" "string filename" ["textures/walltile.png"]			
+			Material "matte"			
+			"float sigma" [0.0]			
+			"texture Kd" "walltile.png"			
+			Shape "trianglemesh"
+			"point P" [
+			-1.0 -1.0 0.0 1.0 -1.0 0.0 1.0 1.0 0.0 -1.0 -1.0 0.0 1.0 1.0 0.0 -1.0 1.0 0.0			
+			]
+			"normal N" [
+			0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0			
+			]
+			"float st" [
+			1.6143571138381958 -0.6284046173095703 
+			1.6284046173095703 1.6143571138381958 
+			-0.6143569946289062 1.6284046173095703 
+			1.6143571138381958 -0.6284046173095703 
+			-0.6143569946289062 1.6284046173095703 
+			-0.6284046173095703 -0.6143569946289062 
+			]
+			"integer indices" [
+			0 1 2 3 4 5 
+			]
+		AttributeEnd
+		
+
+		AttributeBegin
+			Transform [1.884743 0.000000 0.000000 0.000000 0.000000 1.884743 0.000000 0.000000 0.000000 0.000000 1.884743 0.000000 -4.102120 -1.909786 3.109317 1.000000 ]
+			Material "mirror"			
+			"color Kr" [ 0.800000011920929 0.800000011920929 0.800000011920929]			
+			Shape "plymesh" "string filename" ["meshes/00146/Sphere_mat0.ply"]
+		AttributeEnd
+		
+
+	WorldEnd	
